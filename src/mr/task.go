@@ -25,9 +25,5 @@ type Task struct {
 
 // print Task info
 func (t Task) String() string {
-	taskType := "MapTask"
-	if t.Type == ReduceTask {
-		taskType = "ReduceTask"
-	}
-	return fmt.Sprintf("Task{Index: %d, Type: %s, Status: %d, Ctx: %s}", t.Index, taskType, t.Status, t.Ctx)
+	return fmt.Sprintf("Task{Index: %d, Type: %d, Status: %d, Ctx: %s}", t.Index, t.Type, t.Status, t.Ctx)
 }
